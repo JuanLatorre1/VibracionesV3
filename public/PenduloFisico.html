@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación Péndulo Físico</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/styleSimulation.css">
+</head>
+
+<body>
+    <img class="logo" src="../assets/images/icon-removebg-preview.png" alt="logo">
+    <h1>Simulación de un <span class="spam">Péndulo Físico</span></h1>
+    
+        <!-- Sección para el Canvas donde se mostrará el péndulo -->
+        <div id="simulation">
+            <canvas id="pendulumCanvas" width="350" height="350" style="border:1px solid #000;"></canvas>
+        </div>
+        
+    
+    <!-- Sección de entrada de datos -->
+    <div id="input-section">
+        <div>
+            <label for="theta0"><b>Ángulo Inicial</b> (θ₀ en radianes):</label>
+            <input type="number" id="theta0" step="0.01" value="0.01">
+        </div>
+
+        <div>
+            <label for="thetaDot0"><b>Velocidad Angular Inicial</b> (θ̇₀ en rad/s):</label>
+         <input type="number" id="thetaDot0" step="0.01" value="0.1">
+        </div>
+        <label for="masaBarra"><b>Masa de la Barra</b> (kg):</label>
+        <input type="number" id="masaBarra" step="0.01" value="1">
+
+        <div>
+            <label for="masaEsfera"><b>Masa de la Esfera</b> (kg):</label>
+            <input type="number" id="masaEsfera" step="0.01" value="2">
+        </div>
+
+        <div>
+            <label for="longitudBarra"><b>Longitud de la Barra</b> (m):</label>
+            <input type="number" id="longitudBarra" step="0.01" value="1">
+        </div>
+        
+        <div>
+            <label for="radioEsfera"><b>Radio de la Esfera</b> (m):</label>
+            <input type="number" id="radioEsfera" step="0.01" value="0.1">
+        </div>
+
+        <button id="simulateBtn">Simular</button>
+    </div>
+    
+    <!-- Sección para mostrar los resultados -->
+    <div id="output-section">
+        <h2>Resultados</h2>
+        <p>Frecuencia Natural (ω₀): <span id="omegaZero"></span></p>
+        <p>Amplitud (A): <span id="amplitude"></span></p>
+        <p>Fase Inicial (ϕ): <span id="phase"></span></p>
+        <p>Tiempo Transcurrido: <span id="realTime"></span></p>
+    </div>
+
+    <div id="simulation">
+        <canvas id="positionChart" width="500" height="300" ></canvas>
+        <canvas id="velocityChart" width="500" height="300" ></canvas>
+    </div>
+    <script src="../scripts/script.js"></script>
+</body>
+
+</html>

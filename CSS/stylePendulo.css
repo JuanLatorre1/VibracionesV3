@@ -1,0 +1,70 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.spam{
+  color: red;
+}
+.green{
+color: green;
+}
+#output-section > .green{
+  color: green;
+}
+
+.logo{
+  width: 100px;
+
+}
+
+#output-section > h2{
+
+  color: red;
+} 
+#simulation{
+  height: 350px;
+   width: 350px;
+   display: inline block;
+   margin: 0 auto;
+  position: relative;
+  top: 2px;
+
+   background-color: rgb(193, 193, 193);
+}
+
+#input-section {
+  flex-direction: row;
+  position: relative;
+  top: 150px;
+  font-size: 20px;
+  
+}
+
+#output-section {
+  flex-direction: column;
+  position: relative;
+  top: 150px;
+}
+
+/* Media query para pantallas de hasta 768px (móviles y tablets) */
+@media (max-width: 768px) {
+  #input-section {
+      flex-direction: column;  
+      top: 30px; 
+  }
+  #output-section {
+      flex-direction: column;  
+      position: relative;  
+      top: 10px;  
+  }
+  #simulation{
+    flex-direction: column;
+    position: relative;
+    top: 15px;
+  }
+}
+

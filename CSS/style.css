@@ -1,0 +1,100 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  color: #333; /* Añadir color de texto para mejor contraste */
+}
+
+.logo {
+  position: relative;
+  padding: 0 10px;
+  width: 70px;
+  top: 40px;
+}
+
+.main > h3 {
+  padding: 20px;
+  font-size: 25px;
+  display: inline-block; 
+}
+
+.card .card-title {
+  display: block;
+}
+
+.main > h1 {
+  position: relative;
+  top: 10px;
+  font-size: 40px; 
+}
+
+.container > h2 {
+  font-size: 20px;
+}
+
+.tile-image {
+  height: 200px;
+  margin-right: 60px;
+  float: left;
+}
+
+.card {
+  width: 45%;
+  margin-bottom: 20px; 
+  box-shadow: 0 4px 8px rgba(216, 214, 214, 0.1); 
+  transition: transform 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-10px); 
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.main {
+  flex: 1;
+}
+
+.spam {
+  color: rgb(70, 61, 196);
+}
+
+@media (max-width: 680px) {
+  .logo {
+    width: 70px;
+  }
+
+  .main > h3 {
+    display: block;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 20px; 
+  }
+
+  h1 {
+    top: 25px;
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .card img {
+    margin-bottom: 10px;
+    object-fit: cover;
+    display: block; 
+  }
+}
